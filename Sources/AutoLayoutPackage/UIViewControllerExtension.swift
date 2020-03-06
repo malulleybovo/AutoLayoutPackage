@@ -30,21 +30,21 @@ extension UIViewController {
     /// Activates a single constraint.
     ///
     /// - Parameter constraint: The constraint to activate
-    func addConstraints(_ constraint: NSLayoutConstraint) {
+    public func addConstraints(_ constraint: NSLayoutConstraint) {
         NSLayoutConstraint.activate([constraint])
     }
     
     /// Activates a list of constraints.
     ///
     /// - Parameter constraint: The constraints to activate
-    func addConstraints(_ constraints: [NSLayoutConstraint]) {
+    public func addConstraints(_ constraints: [NSLayoutConstraint]) {
         NSLayoutConstraint.activate(constraints)
     }
     
     /// Activates and tracks a list of constraints. Constraints are tracked by unique String identifiers. Constraints with identifiers already taken are ignored (not activated).
     ///
     /// - Parameter constraint: The constraints to activate and track
-    func addTrackedConstraints(_ trackedContraints: [String : NSLayoutConstraint]) {
+    public func addTrackedConstraints(_ trackedContraints: [String : NSLayoutConstraint]) {
         if self.trackedContraints == nil {
             self.trackedContraints = [:]
         }
@@ -63,7 +63,7 @@ extension UIViewController {
     /// - Parameter key: The identifier
     ///
     /// - Returns: The tracked constraint if found or nil if not found
-    func getTrackedConstraint(forKey key: String) -> NSLayoutConstraint? {
+    public func getTrackedConstraint(forKey key: String) -> NSLayoutConstraint? {
         if self.trackedContraints?.index(forKey: key) != nil {
             return self.trackedContraints?[key]
         }

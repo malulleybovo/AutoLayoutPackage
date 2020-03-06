@@ -19,7 +19,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignTopOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignTopOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.topAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.topAnchor : view.topAnchor, constant: padding)
     }
     
@@ -30,7 +30,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignBottomOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignBottomOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.bottomAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.bottomAnchor : view.bottomAnchor, constant: -padding)
     }
     
@@ -41,7 +41,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignLeftOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignLeftOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.leadingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.leadingAnchor : view.leadingAnchor, constant: padding)
     }
     
@@ -52,7 +52,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignRightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint {
+    public func alignRightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint {
         return self.trailingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.trailingAnchor : view.trailingAnchor, constant: -padding)
     }
     
@@ -63,7 +63,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignAbove(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignAbove(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.bottomAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.topAnchor : view.topAnchor, constant: -padding)
     }
     
@@ -74,7 +74,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignBelow(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignBelow(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.topAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.bottomAnchor : view.bottomAnchor, constant: padding)
     }
     
@@ -85,7 +85,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignBefore(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignBefore(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.trailingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.leadingAnchor : view.leadingAnchor, constant: -padding)
     }
     
@@ -96,7 +96,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignAfter(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignAfter(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.leadingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.trailingAnchor : view.trailingAnchor, constant: padding)
     }
     
@@ -106,7 +106,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignCenterXOf(_ view: UIView, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignCenterXOf(_ view: UIView, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.centerXAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerXAnchor : view.centerXAnchor)
     }
     
@@ -116,7 +116,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignCenterYOf(_ view: UIView, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignCenterYOf(_ view: UIView, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.centerYAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerYAnchor : view.centerYAnchor)
     }
     
@@ -126,7 +126,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterOf(_ view: UIView, withinMargins: Bool = false) -> [NSLayoutConstraint]  {
+    public func alignCenterOf(_ view: UIView, withinMargins: Bool = false) -> [NSLayoutConstraint]  {
         return [
             self.alignCenterXOf(view, withinMargins: withinMargins),
             self.alignCenterYOf(view, withinMargins: withinMargins)
@@ -140,7 +140,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignTopToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignTopToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.topAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerYAnchor : view.centerYAnchor, constant: padding)
     }
     
@@ -151,7 +151,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignBottomToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignBottomToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.bottomAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerYAnchor : view.centerYAnchor, constant: padding)
     }
     
@@ -162,7 +162,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignLeftToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignLeftToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.leadingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerXAnchor : view.centerXAnchor, constant: padding)
     }
     
@@ -173,7 +173,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraint to achieve the alignment
-    func alignRightToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
+    public func alignRightToCenterOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> NSLayoutConstraint  {
         return self.trailingAnchor.constraint(equalTo: withinMargins ? view.layoutMarginsGuide.centerXAnchor : view.centerXAnchor, constant: -padding)
     }
     
@@ -182,7 +182,7 @@ extension UIView {
     /// - Parameter constant: The width
     ///
     /// - Returns: The constraint to achieve the alignment
-    func setWidthTo(_ constant: CGFloat) -> NSLayoutConstraint {
+    public func setWidthTo(_ constant: CGFloat) -> NSLayoutConstraint {
         return self.widthAnchor.constraint(equalToConstant: constant)
     }
     
@@ -191,7 +191,7 @@ extension UIView {
     /// - Parameter constant: The height
     ///
     /// - Returns: The constraint to achieve the alignment
-    func setHeightTo(_ constant: CGFloat) -> NSLayoutConstraint {
+    public func setHeightTo(_ constant: CGFloat) -> NSLayoutConstraint {
         return self.heightAnchor.constraint(equalToConstant: constant)
     }
     
@@ -202,7 +202,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWidthOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWidthOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignLeftOf(view, padding: padding, withinMargins: withinMargins),
             self.alignRightOf(view, padding: padding, withinMargins: withinMargins)
@@ -216,7 +216,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignHeightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignHeightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: padding, withinMargins: withinMargins),
             self.alignBottomOf(view, padding: padding, withinMargins: withinMargins)
@@ -232,7 +232,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other views of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBetween(above aboveView: UIView, below belowView: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBetween(above aboveView: UIView, below belowView: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAbove(aboveView, padding: padding, withinMargins: withinMargins),
             self.alignBelow(belowView, padding: padding, withinMargins: withinMargins)
@@ -247,7 +247,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other views of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBetween(before beforeView: UIView, after afterView: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBetween(before beforeView: UIView, after afterView: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBefore(beforeView, padding: padding, withinMargins: withinMargins),
             self.alignAfter(afterView, padding: padding, withinMargins: withinMargins)
@@ -265,7 +265,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignTopLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignTopLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -282,7 +282,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignTopRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignTopRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignRightOf(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -299,7 +299,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBottomLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBottomLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -316,7 +316,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBottomRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBottomRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignRightOf(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -333,7 +333,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAboveAndBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAboveAndBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAbove(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignBefore(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -350,7 +350,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAboveAndAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAboveAndAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAbove(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignAfter(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -367,7 +367,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBelowAndBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBelowAndBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBelow(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignBefore(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -384,7 +384,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignBelowAndAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignBelowAndAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBelow(view, padding: vertPadding, withinMargins: withinMargins || withinVertMargins),
             self.alignAfter(view, padding: horizPadding, withinMargins: withinMargins || withinHorizMargins)
@@ -401,7 +401,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithin(_ view: UIView, padding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithin(_ view: UIView, padding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return alignWithin(view, horizPadding: padding, vertPadding: padding, withinHorizMargins: withinHorizMargins, withinVertMargins: withinVertMargins, withinMargins: withinMargins)
     }
     
@@ -415,7 +415,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithin(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithin(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
@@ -434,7 +434,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithinTopOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithinTopOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinHorizMargins || withinMargins),
@@ -452,7 +452,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithinBottomOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithinBottomOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinHorizMargins || withinMargins),
@@ -470,7 +470,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithinLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithinLeftOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
@@ -488,7 +488,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignWithinRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignWithinRightOf(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
@@ -504,7 +504,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterTopOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterTopOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterXOf(view, withinMargins: withinMargins)
@@ -518,7 +518,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterBottomOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterBottomOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBottomOf(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterXOf(view, withinMargins: withinMargins)
@@ -532,7 +532,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterLeftOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterLeftOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignLeftOf(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterYOf(view, withinMargins: withinMargins)
@@ -546,7 +546,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterRightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterRightOf(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignRightOf(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterYOf(view, withinMargins: withinMargins)
@@ -564,7 +564,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAppendedAbove(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAppendedAbove(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAbove(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinHorizMargins || withinMargins),
@@ -582,7 +582,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAppendedBelow(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAppendedBelow(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBelow(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignLeftOf(view, padding: horizPadding, withinMargins: withinHorizMargins || withinMargins),
@@ -600,7 +600,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAppendedBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAppendedBefore(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
@@ -618,7 +618,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignAppendedAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignAppendedAfter(_ view: UIView, horizPadding: CGFloat = 0.0, vertPadding: CGFloat = 0.0, withinHorizMargins: Bool = false, withinVertMargins: Bool = false, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignTopOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
             self.alignBottomOf(view, padding: vertPadding, withinMargins: withinVertMargins || withinMargins),
@@ -634,7 +634,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterAbove(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterAbove(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAbove(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterXOf(view, withinMargins: withinMargins)
@@ -648,7 +648,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterBelow(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterBelow(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBelow(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterXOf(view, withinMargins: withinMargins)
@@ -662,7 +662,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterBefore(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterBefore(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignBefore(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterYOf(view, withinMargins: withinMargins)
@@ -676,7 +676,7 @@ extension UIView {
     /// - Parameter withinMargins: Whether to align based on the margins of the other view of not
     ///
     /// - Returns: The constraints to achieve the alignment
-    func alignCenterAfter(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
+    public func alignCenterAfter(_ view: UIView, padding: CGFloat = 0.0, withinMargins: Bool = false) -> [NSLayoutConstraint] {
         return [
             self.alignAfter(view, padding: padding, withinMargins: withinMargins),
             self.alignCenterYOf(view, withinMargins: withinMargins)
